@@ -1,0 +1,89 @@
+/**************************************/
+/****            RESET             ****/
+/**************************************/
+
+/* Box sizing */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* Reset margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+/* Set up the HTML */
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+/* Set up the body */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+picture,
+video,
+iframe{
+    max-width: 100%;
+    display: block;
+}
+
+svg {
+    fill: currentColor;
+}
+
+/* Make from element easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Set up the selector of the text */
+::moz-selection {
+
+}
+
+::selection {
+    
+}
+
+/* Remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::after,
+    *::before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Setting mode dark for people that having active it mode */
+@media (prefers-color-scheme: dark){
+
+}
+
+/* Setting mode high contrast for people that havind actived it mode */
+@media (prefers-contrast: high){
+
+}

@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat-variable-font_wght.ttf") format("ttf");
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/montserrat-italic-variable-font_wght.ttf") format("ttf");
+  font-style: italic;
+  font-weight: 100 1000;
+  font-display: swap;
+}
+
+$fs-5xl: 7.2rem;
+$fs-4xl: 6.4rem;
+$fs-3xl: 5.6rem;
+$fs-2xl: 4.8rem;
+$fs-xl: 4rem;
+$fs-l: 3.6rem;
+$fs-m: 3.2rem;
+$fs-s: 2.8rem;
+$fs-xs: 2.4rem;
+$fs-2xs: 2rem;
+$fs-3xs: 1.8rem;
+
+$fs-base: 2rem;
+
+$fs-btn: $fs-3xs;
+
+$font-stack: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+html {
+  font-family: $font-stack;
+}
+
+// medida 1376px para el clamp del font-size
+
+p {
+  max-width: 75ch;
+}
+
+h1 {
+  font-size: clamp(5.6rem, 5.0331rem + 1.5748vw, 7.2rem);
+}
+
+h2 {
+  font-size: clamp(4.8rem, 4.2331rem + 1.5748vw, 6.4rem);
+}
+
+h3 {
+  font-size: clamp(4rem, 3.4331rem + 1.5748vw, 5.6rem);
+}
+
+h4 {
+  font-size: clamp(3.6rem, 3.1748rem + 1.1811vw, 4.8rem);
+}
