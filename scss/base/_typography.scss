@@ -1,3 +1,5 @@
+@import '../utilities/mixins';
+
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/montserrat-variable-font_wght.ttf") format("ttf");
@@ -36,30 +38,35 @@ $font-stack: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
 
 html {
   font-family: $font-stack;
+  // font-size: $fs-base;
 }
 
-// medida 1376px para el clamp del font-size
+// El font-size del HTML es 62.5% para trabajar con REM
+// La equivalencia es 1rem = 10px
+$min-width-rem: 36rem;
+$max-width-rem: 137.6rem;
 
 p {
-  max-width: 75ch;
+  // max-width: 75ch;
+  font-size: $fs-base;
 }
 
 h1,
 .h1 {
-  font-size: clamp(5.6rem, 5.0331rem + 1.5748vw, 7.2rem);
+  @include clamp-builder-font($min-width-rem, $max-width-rem, $fs-3xl, $fs-5xl);
 }
 
 h2,
 .h2 {
-  font-size: clamp(4.8rem, 4.2331rem + 1.5748vw, 6.4rem);
+  @include clamp-builder-font($min-width-rem, $max-width-rem, $fs-2xl, $fs-4xl);
 }
 
 h3,
 .h3 {
-  font-size: clamp(4rem, 3.4331rem + 1.5748vw, 5.6rem);
+  @include clamp-builder-font($min-width-rem, $max-width-rem, $fs-xl, $fs-3xl);
 }
 
 h4,
 .h4 {
-  font-size: clamp(3.6rem, 3.1748rem + 1.1811vw, 4.8rem);
+  @include clamp-builder-font($min-width-rem, $max-width-rem, $fs-l, $fs-2xl);
 }

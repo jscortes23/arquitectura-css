@@ -114,27 +114,27 @@ html {
 }
 
 p {
-  max-width: 75ch;
+  font-size: 2rem;
 }
 
 h1,
 .h1 {
-  font-size: clamp(5.6rem, 5.0331rem + 1.5748vw, 7.2rem);
+  font-size: clamp(5.6rem, 5.0330708661rem + 1.5748031496vw, 7.2rem);
 }
 
 h2,
 .h2 {
-  font-size: clamp(4.8rem, 4.2331rem + 1.5748vw, 6.4rem);
+  font-size: clamp(4.8rem, 4.2330708661rem + 1.5748031496vw, 6.4rem);
 }
 
 h3,
 .h3 {
-  font-size: clamp(4rem, 3.4331rem + 1.5748vw, 5.6rem);
+  font-size: clamp(4rem, 3.4330708661rem + 1.5748031496vw, 5.6rem);
 }
 
 h4,
 .h4 {
-  font-size: clamp(3.6rem, 3.1748rem + 1.1811vw, 4.8rem);
+  font-size: clamp(3.6rem, 3.1748031496rem + 1.1811023622vw, 4.8rem);
 }
 
 /******************************/

@@ -1,6 +1,22 @@
+@use 'sass:math';
+
 @mixin max-width {
   width: min(120rem, 100% - 4rem);
   margin-inline: auto;
+}
+
+@mixin clamp-builder-font ($min-width-rem, $max-width-rem, $min-font-size, $max-font-size) {
+  $root-font-size: 10; 
+
+  $min-width: math.div($min-width-rem, $root-font-size);
+  $max-width: math.div($max-width-rem, $root-font-size);
+
+  $slope: math.div(($max-font-size - $min-font-size), ( $max-width - $min-width ));
+  $y-axis-intersection: -$min-width * $slope + $min-font-size;
+
+  & {
+    font-size: clamp(#{$min-font-size}, #{$y-axis-intersection} + #{$slope * 10}vw, #{$max-font-size});
+  }
 }
 
 @mixin button-states($clr-initial, $clr-hovered, $clr-pressed,  $clr-focused, $clr-disabled, $text-color) {
