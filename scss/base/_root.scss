@@ -68,14 +68,17 @@ $clr-alert: #f6ff51;
 $clr-info: #3e7ff8;
 $clr-success: #39ff7e;
 
-$btn-color: $clr-black-0;
-$btn-bg-color:  $clr-primary;
-
 $rounded: 0.8rem;
 $rounded-md: 1.6rem;
 $rounded-full: 50%;
 
 $clr-border: black;
 
-$border-1: 0.5 solid $clr-border;
-$border-2: 1.5px solid $clr-border;
+$border-1: 0.5px;
+$border-2: 1.5px;
+
+$breakpoints: (
+    'small': (min-width: 576px), 
+    'medium': (min-width: 1000px), 
+    'large': (min-width: 1200px)
+)

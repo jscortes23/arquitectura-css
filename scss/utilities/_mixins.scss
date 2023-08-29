@@ -1,0 +1,50 @@
+@mixin max-width {
+  width: min(120rem, 100% - 4rem);
+  margin-inline: auto;
+}
+
+@mixin button-states($clr-initial, $clr-hovered, $clr-pressed,  $clr-focused, $clr-disabled, $text-color) {
+  & {
+    color: $text-color;
+    background-color: $clr-initial;
+  }
+  
+  &:hover {
+    color: $text-color;
+    background-color: $clr-hovered;
+  }
+
+  &:active {
+    color: $text-color;
+    background-color: $clr-pressed;
+  }
+
+  &:focus-visible {
+    color: $text-color;
+    background-color: $clr-focused;
+  }
+
+  &:disabled {
+    color: $text-color;
+    background-color: $clr-disabled;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'Not found the value for `#{$breakpoint}`. '
+           + 'Please, you sure it\'s define in the map `$breakpoints`.';
+  }
+}

@@ -1,13 +1,77 @@
 /******************************/
 /********   BUTTONS    ********/
 /******************************/
-.btn {
+@import "../utilities/mixins";
+
+%btn {
   display: inline-flex;
   align-items: center;
   column-gap: 1rem;
   font-size: $fs-btn;
   padding: 0.4rem 1.6rem;
   line-height: 2.6rem;
-  color: $btn-color;
-  background-color: $btn-bg-color;
+  border: $border-1 solid transparent;
+  border-radius: $rounded;
+  transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
+
+  > svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  > span {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+.button--primary {
+  @extend %btn;
+  @include button-states(
+    $clr-magenta-60,
+    $clr-magenta-70,
+    $clr-magenta-90,
+    $clr-primary,
+    $clr-magenta-30,
+    $clr-black-0
+  );
+}
+
+.button--secondary {
+  @extend %btn;
+  @include button-states(
+    $clr-orange-60,
+    $clr-orange-70,
+    $clr-orange-90,
+    $clr-secondary,
+    $clr-orange-30,
+    $clr-black-0
+  );
+}
+
+.button--tertiary {
+  @extend %btn;
+  @include button-states(
+    $clr-green-60,
+    $clr-green-70,
+    $clr-green-90,
+    $clr-tertiary,
+    $clr-green-30,
+    $clr-black-0
+  );
+}
+
+.button--link {
+  @extend %btn;
+  @include button-states(
+    $clr-black-0,
+    $clr-black-10,
+    $clr-black-30,
+    $clr-black-0,
+    $clr-black-30,
+    $clr-primary
+  );
+  &:hover {
+    text-decoration: underline;
+  }
 }
