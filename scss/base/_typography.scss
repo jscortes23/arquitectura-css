@@ -38,7 +38,10 @@ $font-stack: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
 
 html {
   font-family: $font-stack;
-  // font-size: $fs-base;
+}
+
+body {
+  font-size: $fs-base;
 }
 
 // El font-size del HTML es 62.5% para trabajar con REM
@@ -48,7 +51,7 @@ $max-width-rem: 137.6rem;
 
 p {
   // max-width: 75ch;
-  font-size: $fs-base;
+  // font-size: $fs-base;
 }
 
 h1,

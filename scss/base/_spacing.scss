@@ -1,0 +1,32 @@
+// El font-size del HTML es 62.5% para trabajar con REM
+// La equivalencia es 1rem = 10px
+$spacing: (
+    1: 0.8rem,
+    2: 1.2rem,
+    3: 1.6rem,
+    4: 2rem,
+    5: 2.4rem,
+    6: 2.8rem,
+    7: 3.2rem,
+    8: 3.6rem,
+    9: 4rem,
+    10: 4.8rem,
+    11: 5.6rem,
+    12: 6.4rem,
+    13: 7.2rem,
+    14: 8rem,
+    15: 9.6rem,
+    16: 11.2rem,
+    17: 12.8rem
+);
+
+$directions: (
+    t: block-start,
+    r: inline-end, 
+    b: block-end, 
+    l: inline-start, 
+    x: inline, 
+    y: block
+);
+
+$models-spacing: (m, p);

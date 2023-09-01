@@ -1,5 +1,14 @@
 @import '../utilities/mixins';
+@import '../utilities/functions';
 
 section {
     @include max-width;
+}
+
+.flex-x {
+    @include flex-x;
+}
+
+.flex-y {
+    @include flex-y;
 }
