@@ -68,6 +68,22 @@ $clr-alert: #f6ff51;
 $clr-info: #3e7ff8;
 $clr-success: #39ff7e;
 
+/* Colores nuevos de las marcas */
+
+$clr-logo-1: #f4ac4b;
+$clr-logo-2: #EE8B46;
+$clr-logo-3: #E8673D;
+$clr-logo-4: #C11246;
+$clr-logo-5: #9A1238;
+$clr-logo-6: #5E0A1E;
+
+$clr-logo-7: #84C6C2;
+$clr-logo-8: #007767;
+$clr-logo-9: #074152;
+$clr-logo-10: #062D3C;
+$clr-logo-11: #1E2C55;
+$clr-logo-12: #0E1647;
+
 $rounded: 0.8rem;
 $rounded-md: 1.6rem;
 $rounded-full: 50%;
@@ -78,7 +94,9 @@ $border-1: 0.5px;
 $border-2: 1.6px;
 
 $breakpoints: (
-    'small': (min-width: 576px), 
-    'medium': (min-width: 1000px), 
-    'large': (min-width: 1200px)
+    'small': (min-width: 640px), 
+    'medium': (min-width: 768px), 
+    'large': (min-width: 1024px),
+    'large-x': (min-width: 1280px),
+    'large-xx': (min-width: 1536px)
 )

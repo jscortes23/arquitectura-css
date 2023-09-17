@@ -1,0 +1,64 @@
+/******************************/
+/********   ICONS      ********/
+/******************************/
+
+$font-icon-path: '../../fonts/';
+$icon-path: '../../icons/';
+
+%icon {
+  display: inline-block;
+  width: 4rem;
+  aspect-ratio: 1;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: 'icons-vango';
+  src:  url($font-icon-path + 'icons-vango.eot?dpme1c');
+  src:  url($font-icon-path + 'icons-vango.eot?dpme1c#iefix') format('embedded-opentype'),
+    url($font-icon-path + 'icons-vango.ttf?dpme1c') format('truetype'),
+    url($font-icon-path + 'icons-vango.woff?dpme1c') format('woff'),
+    url($font-icon-path + 'icons-vango.svg?dpme1c#icons-vango') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons-vango' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arquetipo-vango:before {
+  content: "\e900";
+}
+
+.icon-logo-vango:before {
+  content: "\e904";
+}
+
+.icon-logo-vango-business {
+  @extend %icon;
+  background-image: url($icon-path + 'logo-vango-business.svg');
+}
+
+.icon-logo-vango-tours {
+  @extend %icon;
+  background-image: url($icon-path + 'logo-vango-tours.svg');
+}
+
+.icon-logo-vango-parchado {
+  @extend %icon;
+  background-image: url($icon-path + 'logo-vango-parchado.svg');
+}
