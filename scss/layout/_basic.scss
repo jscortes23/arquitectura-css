@@ -1,14 +1,29 @@
-@import '../utilities/mixins';
-@import '../utilities/functions';
+@use "../utilities/mixins";
+@use "sass:map";
 
 section {
-    @include max-width;
+  @include mixins.max-width;
 }
 
-.flex-x {
-    @include flex-x;
+.container-dotted-line {
+  display: inline-flex;
+  place-content: center center;
+  position: relative;
+  width: 215px;
+  height: 157px;
+  background-color: var(--bg-color, #ffffff);
+  border-radius: var(--corner-top-left-x, 10%) var(--corner-top-rigth-x, 10%)
+    var(--corner-bottom-rigth-x, 10%) var(--corner-bottom-left-x, 10%) /
+    var(--corner-top-letf-y, 20%) var(--corner-top-rigth-y, 20%)
+    var(--corner-bottom-rigth-y, 20%) var(--corner-bottom-left-y, 20%);
 }
 
-.flex-y {
-    @include flex-y;
+.container-dotted-line::after {
+  content: "";
+  position: absolute;
+  inset: -0.4rem;
+  width: 100%;
+  height: 100%;
+  border: $border-2 dashed map.get($clr-black, 40);
+  border-radius: inherit;
 }

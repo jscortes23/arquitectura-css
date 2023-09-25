@@ -1,5 +1,7 @@
 @use "sass:math";
+@use "../base/root";
 @use "../base/spacing";
+@use "../atoms/icons";
 
 @mixin flex-x {
   display: flex;
@@ -21,11 +23,32 @@
   @if ($model == "p") {
     $key: padding;
   }
+  .#{$model}x-auto{
+    #{$key}-inline: auto;
+  }
   @each $orientation, $direction in spacing.$directions {
     @each $number, $space in spacing.$spacing {
       .#{$model}#{$orientation}-#{$number} {
         #{$key}-#{$direction}: #{$space};
       }
     }
+  }
+}
+
+/* Crear tamaño de iconos */
+
+@each $sizeName, $size in icons.$size-icons {
+  .icon-#{$sizeName} {
+    width: $size;
+    aspect-ratio: 1;
+  }
+}
+
+/* Crear sombras que se ajustan a la forma del contenedor */
+
+@each $className, $propiedades in root.$drops-shadows {
+  .#{$className} {
+    $drop-shadow: map-get($propiedades, filter);
+    filter: $drop-shadow;
   }
 }

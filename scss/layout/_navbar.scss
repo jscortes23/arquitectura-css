@@ -1,4 +1,4 @@
-@import "../utilities/mixins";
+@use "sass:map";
 
 .header {
   position: fixed;
@@ -6,9 +6,7 @@
   z-index: 1;
 
   .navbar-toogle:checked ~ .navbar {
-    // transform: translateY(0);
-  height: calc(100vh - 4rem);
-
+    height: calc(100vh - 4rem);
   }
 }
 
@@ -18,10 +16,23 @@
   left: 0;
   width: 100%;
   height: 0;
-  background-color: $clr-orange-80;
+  background-color: map.get($clr-orange, 80);
   transition: height ease-in-out 400ms;
   overflow-y: hidden;
-  // transform: translateY(-110vh);
+
+  &-toogle:checked ~ .button--navbar {
+    & div:first-child {
+      transform: rotate(45deg);
+    }
+  
+    & div:nth-child(2) {
+      opacity: 0;
+    }
+  
+    & div:last-child {
+      transform: rotate(-45deg);
+    }
+  }
 
   &__menu {
     // visibility: hidden;
@@ -36,7 +47,7 @@
     position: relative;
     font-size: 1.6rem;
     padding: 0.4rem;
-    color: $clr-black-0;
+    color: map.get($clr-black, 0);
   }
 
   &__link::after {
@@ -46,7 +57,7 @@
     content: "";
     width: 0;
     height: 2px;
-    background-color: $clr-orange-90;
+    background-color: map.get($clr-orange, 90);
     transition: width linear 300ms;
   }
 

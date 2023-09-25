@@ -1,11 +1,74 @@
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .visibility--hidden {
-    visibility: hidden;
+  visibility: hidden;
 }
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-normal {
+  justify-content: normal;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+@include class-color-and-background ($clr-magenta, "magenta");
+@include class-color-and-background ($clr-black, "black");
+@include class-color-and-background ($clr-orange, "orange");
+@include class-color-and-background ($clr-blue, "blue");
+@include class-color-and-background ($clr-green, "green");
+@include class-color-and-background ($clr-main);

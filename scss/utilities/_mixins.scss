@@ -64,3 +64,24 @@
            + 'Please, you sure it\'s define in the map `$breakpoints`.';
   }
 }
+
+@mixin class-color-and-background ($pallet-color, $name-pallet: null) {
+  @each $scale, $color in $pallet-color {
+    @if $name-pallet != null {
+      .clr-#{$name-pallet}-#{$scale} {
+        color: #{$color};
+      }
+      .bg-#{$name-pallet}-#{$scale} {
+        background-color: #{$color};
+      }
+    }
+    @else {
+      .clr-#{$scale} {
+        color: #{$color};
+      }
+      .bg-#{$scale} {
+        background-color: #{$color};
+      }
+    }
+  }
+}
