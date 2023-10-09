@@ -165,7 +165,7 @@ h4,
   -moz-column-gap: 1rem;
        column-gap: 1rem;
   font-size: 1.8rem;
-  padding: 0.4rem 1.6rem;
+  padding: 0.8rem 1.6rem;
   line-height: 2.6rem;
   border: 1.6px solid transparent;
   border-radius: 0.8rem;
@@ -201,6 +201,9 @@ h4,
   background-color: #cf6087;
 }
 
+.button--secondary {
+  border: 3px solid #e5e5e5;
+}
 .button--secondary {
   color: #ffffff;
   background-color: #f08320;
@@ -268,6 +271,10 @@ h4,
 }
 
 .button--navbar {
+  position: absolute;
+  top: 70%;
+  left: 9%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   width: 2.5rem;
@@ -344,19 +351,16 @@ h4,
 /******************************/
 /********    LAYOUT    ********/
 /******************************/
-section {
+section,
+main {
   width: min(120rem, 100% - 4rem);
   margin-inline: auto;
 }
 
 .container-dotted-line {
-  display: inline-flex;
-  place-content: center center;
   position: relative;
-  width: 215px;
-  height: 157px;
   background-color: var(--bg-color, #ffffff);
-  border-radius: var(--corner-top-left-x, 10%) var(--corner-top-rigth-x, 10%) var(--corner-bottom-rigth-x, 10%) var(--corner-bottom-left-x, 10%)/var(--corner-top-letf-y, 20%) var(--corner-top-rigth-y, 20%) var(--corner-bottom-rigth-y, 20%) var(--corner-bottom-left-y, 20%);
+  border-radius: var(--corner-top-left-x, 10%) var(--corner-top-right-x, 10%) var(--corner-bottom-right-x, 10%) var(--corner-bottom-left-x, 10%)/var(--corner-top-left-y, 20%) var(--corner-top-right-y, 20%) var(--corner-bottom-right-y, 20%) var(--corner-bottom-left-y, 20%);
 }
 
 .container-dotted-line::after {
@@ -375,13 +379,28 @@ section {
   z-index: 1;
 }
 .header .navbar-toogle:checked ~ .navbar {
-  height: calc(100vh - 4rem);
+  height: 100vh;
+  height: 100dvh;
+}
+.header .container-dotted-line {
+  width: 9rem;
+  height: 7.2rem;
+  margin-inline: auto;
+  padding: 1rem;
+  z-index: 2;
+}
+.header .icon-logo-vango {
+  font-size: 2.8rem;
+}
+
+input[type=checkbox] {
+  display: none;
 }
 
 .navbar {
   position: absolute;
-  top: 100%;
-  left: 0;
+  inset: 0;
+  display: grid;
   width: 100%;
   height: 0;
   background-color: #f08320;
@@ -397,13 +416,21 @@ section {
 .navbar-toogle:checked ~ .button--navbar div:last-child {
   transform: rotate(-45deg);
 }
+.navbar__menu {
+  display: grid;
+  height: 70%;
+  align-self: center;
+  align-items: center;
+}
 .navbar__item {
   margin-block: 0.5rem;
   text-align: center;
 }
 .navbar__link {
   position: relative;
-  font-size: 1.6rem;
+  width: 100%;
+  font-size: 2.2rem;
+  font-weight: 400;
   padding: 0.4rem;
   color: #ffffff;
 }
@@ -1369,6 +1396,10 @@ section {
   text-align: center;
 }
 
+.rounded {
+  border-radius: 100vw;
+}
+
 .hidden {
   display: none;
 }
@@ -1903,4 +1934,4 @@ section {
 
 .bg-neutro {
   background-color: #ffffff;
-}/*# sourceMappingURL=main.css.map */
+}

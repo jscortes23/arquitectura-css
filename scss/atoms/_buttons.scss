@@ -1,7 +1,6 @@
 /******************************/
 /********   BUTTONS    ********/
 /******************************/
-@use "sass:map";
 @import "../utilities/mixins";
 
 %btn {
@@ -9,7 +8,7 @@
   align-items: center;
   column-gap: 1rem;
   font-size: $fs-btn;
-  padding: 0.4rem 1.6rem;
+  padding: 0.8rem 1.6rem;
   line-height: 2.6rem;
   border: $border-2 solid transparent;
   border-radius: $rounded;
@@ -29,47 +28,48 @@
 .button--primary {
   @extend %btn;
   @include button-states(
-    map.get($clr-magenta, 80),
-    map.get($clr-magenta, 70),
-    map.get($clr-magenta, 90),
+    map-get($clr-magenta, 80),
+    map-get($clr-magenta, 70),
+    map-get($clr-magenta, 90),
     $clr-primary, 
-    map.get($clr-magenta, 40),
-    map.get($clr-black, 0)
+    map-get($clr-magenta, 40),
+    map-get($clr-black, 0)
   );
 }
 
 .button--secondary {
   @extend %btn;
+  border: 3px solid map-get($clr-black, 10);
   @include button-states(
-    map.get($clr-orange, 80),
-    map.get($clr-orange, 70),
-    map.get($clr-orange, 90),
+    map-get($clr-orange, 80),
+    map-get($clr-orange, 70),
+    map-get($clr-orange, 90),
     $clr-secondary,
-    map.get($clr-orange, 40),
-    map.get($clr-black, 0)
+    map-get($clr-orange, 40),
+    map-get($clr-black, 0)
   );
 }
 
 .button--tertiary {
   @extend %btn;
   @include button-states(
-    map.get($clr-green, 80),
-    map.get($clr-green, 70),
-    map.get($clr-green, 90),
+    map-get($clr-green, 80),
+    map-get($clr-green, 70),
+    map-get($clr-green, 90),
     $clr-tertiary,
-    map.get($clr-green, 40),
-    map.get($clr-black, 0)
+    map-get($clr-green, 40),
+    map-get($clr-black, 0)
   );
 }
 
 .button--link {
   @extend %btn;
   @include button-states(
-    map.get($clr-black, 0),
-    map.get($clr-black, 10),
-    map.get($clr-black, 30),
-    map.get($clr-black, 0),
-    map.get($clr-black, 40),
+    map-get($clr-black, 0),
+    map-get($clr-black, 10),
+    map-get($clr-black, 30),
+    map-get($clr-black, 0),
+    map-get($clr-black, 40),
     $clr-primary
   );
   &:hover {
@@ -78,6 +78,10 @@
 }
 
 .button--navbar {
+  position: absolute;
+  top: 70%;
+  left: 9%;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   width: 2.5rem;
@@ -90,7 +94,7 @@
     width: inherit;
     height: .2rem;
     border-radius: 5px;
-    background-color: map.get($clr-orange, 30);
+    background-color: map-get($clr-orange, 30);
     transition: all 500ms;
     transform-origin: left;
   }

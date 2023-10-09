@@ -4,21 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barra de navegación</title>
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/main.min.css" />
+    <link rel="stylesheet" href="/css/main-large.min.css" media="(min-width: 1024px)" />
   </head>
   <body>
     <header class="header">
-      <a class="container-dotted-line mx-auto drop-shadow-3" style="--corner-top-left-x: 0; --corner-top-left-y: 0; --corner-top-right-x: 10%; --corner-top-right-y: 42%; --corner-bottom-right-x: 26%; --corner-bottom-right-y: 34%; --corner-bottom-left-x: 100%; --corner-bottom-left-y: 40%;" href="/">
-        <span class="icon-logo-vango flex items-center" aria-hidden="true"></span>
+      <a class="container-dotted-line drop-shadow-3 flex justify-center" style="
+      --corner-top-left-x: 0; 
+      --corner-top-left-y: 0; 
+      --corner-top-right-x: 8%; 
+      --corner-top-right-y: 30%; 
+      --corner-bottom-right-x: 30%; 
+      --corner-bottom-right-y: 37%; 
+      --corner-bottom-left-x: 100%; 
+      --corner-bottom-left-y: 66%;" href="/">
+        <span class="icon-logo-vango flex items-center clr-primary" aria-hidden="true"></span>
       </a>
       <input type="checkbox" id="navbar-toogle" class="navbar-toogle" />
       <nav class="navbar">
         <ul class="navbar__menu">
           <li class="navbar__item">
             <a href="#" class="navbar__link">¿Quienes somos?</a>
-          </li>
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">Modalidad compartidad</a>
           </li>
           <li class="navbar__item">
             <a href="#" class="navbar__link">Tours</a>
@@ -36,7 +42,7 @@
             <a href="#" class="navbar__link">Contáctanos</a>
           </li>
           <li class="navbar__item">
-            <buttton class="btn--secondary">Cotizar</buttton>
+            <buttton class="button--secondary rounded">Cotizar</buttton>
           </li>
         </ul>
       </nav>

@@ -3,19 +3,6 @@
 @use "../base/spacing";
 @use "../atoms/icons";
 
-@mixin flex-x {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-@mixin flex-y {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
 /* Crear espacios para los padding y margin */
 
 @each $model in spacing.$models-spacing {

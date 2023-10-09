@@ -1,0 +1,42 @@
+/* Colores nuevos de las marcas */
+.header {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+}
+.header .navbar-toogle-label {
+  display: none;
+}
+.header .container-dotted-line {
+  width: 21.5rem;
+  height: 12rem;
+  margin-inline-start: 4rem;
+}
+.header .icon-logo-vango {
+  font-size: 6.2rem;
+}
+
+.navbar {
+  grid-column: 2/-1;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-min-content;
+  height: min-content;
+  justify-self: end;
+  background-color: #ffffff;
+  border-radius: 100vw 0 0 100vw;
+  inset: inherit;
+  filter: drop-shadow(0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.2));
+}
+.navbar__menu {
+  grid-auto-flow: column;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+  padding-inline: 2rem;
+  height: 100%;
+}
+.navbar__link {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #989898;
+}
