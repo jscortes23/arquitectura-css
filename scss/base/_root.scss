@@ -2,6 +2,7 @@ $clr-primary: #980338;
 $clr-secondary: #f3933c;
 $clr-tertiary: #027a69;
 $clr-neutro: #ffffff;
+$clr-bg-main: #f9f9f9;
 
 $clr-main: (
   primary: $clr-primary,
@@ -101,6 +102,32 @@ $clr-logo-10: #062d3c;
 $clr-logo-11: #1e2c55;
 $clr-logo-12: #0e1647;
 
+$fs-5xl: 7.2rem;
+$fs-4xl: 6.4rem;
+$fs-3xl: 5.6rem;
+$fs-2xl: 4.8rem;
+$fs-xl: 4rem;
+$fs-l: 3.6rem;
+$fs-m: 3.2rem;
+$fs-s: 2.8rem;
+$fs-xs: 2.4rem;
+$fs-2xs: 2rem;
+$fs-3xs: 1.8rem;
+
+$font-size-scale: (
+  '5xl': $fs-5xl,
+  '4xl': $fs-4xl,
+  '3xl': $fs-3xl,
+  '2xl': $fs-2xl,
+  'xl': $fs-xl,
+  'l': $fs-l,
+  'm': $fs-m,
+  's': $fs-s,
+  'xs': $fs-xs,
+  '2xs': $fs-2xs,
+  '3xs': $fs-3xs
+);
+
 $rounded: 0.8rem;
 $rounded-md: 1.6rem;
 $rounded-full: 50%;
@@ -138,4 +165,16 @@ $breakpoints: (
   "large-xx": (
     min-width: 1536px,
   ),
+);
+
+$size-icons: (
+  3xs: 1.6rem,
+  2xs: 2.4rem,
+  xs: 3.2rem,
+  s: 4.8rem,
+  m: 6.4rem,
+  l: 7.2rem,
+  xl: 12.8rem,
+  2xl: 25.6rem,
+  3xl: 51.2rem
 );

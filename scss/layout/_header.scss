@@ -1,0 +1,23 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+
+  .navbar-toogle:checked ~ .navbar {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .container-dotted-line {
+    width: 9rem;
+    height: 7.2rem;
+    margin-inline: auto;
+    padding: 1rem;
+    z-index: 2;
+  }
+
+  .icon-logo-vango {
+    font-size: 2.8rem;
+  }
+}

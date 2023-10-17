@@ -1,4 +1,3 @@
-/* Colores nuevos de las marcas */
 .header {
   display: grid;
   grid-template-columns: min-content 1fr;
@@ -16,6 +15,10 @@
   font-size: 6.2rem;
 }
 
+/* Colores nuevos de las marcas */
+/************************************/
+/********    NAVBAR LARGE    ********/
+/************************************/
 .navbar {
   grid-column: 2/-1;
   width: -moz-max-content;
@@ -25,18 +28,21 @@
   justify-self: end;
   background-color: #ffffff;
   border-radius: 100vw 0 0 100vw;
-  inset: inherit;
-  filter: drop-shadow(0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.2));
+  inset: initial;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.1);
 }
 .navbar__menu {
   grid-auto-flow: column;
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-  padding-inline: 2rem;
-  height: 100%;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  padding: 0.4rem 2rem;
+  height: auto;
 }
 .navbar__link {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #989898;
+}
+.navbar__link:hover {
+  color: #e3740e;
 }

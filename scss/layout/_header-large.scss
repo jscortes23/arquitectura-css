@@ -1,0 +1,19 @@
+.header {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+
+  .navbar-toogle-label {
+    display: none;
+  }
+
+  .container-dotted-line {
+    width: 21.5rem;
+    height: 12rem;
+    margin-inline-start: 4rem;
+  }
+
+  .icon-logo-vango {
+    font-size: 6.2rem;
+  }
+}

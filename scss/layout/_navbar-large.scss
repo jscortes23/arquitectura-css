@@ -1,0 +1,33 @@
+@import "../base/root";
+
+/************************************/
+/********    NAVBAR LARGE    ********/
+/************************************/
+
+.navbar {
+  grid-column: 2/-1;
+  width: max-content;
+  height: min-content;
+  justify-self: end;
+  background-color: map-get($clr-black, 0);
+  border-radius: 100vw 0 0 100vw;
+  inset: initial;
+  box-shadow: (3px 3px 6px rgba(0,0,0,.1));
+
+  &__menu {
+    grid-auto-flow: column;
+    column-gap: 3rem;
+    padding: .4rem 2rem;
+    height: auto;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: map-get($clr-black, 50);
+  }
+
+  &__link:hover {
+    color: map-get($clr-orange, 90);
+  }
+}

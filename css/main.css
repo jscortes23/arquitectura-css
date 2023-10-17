@@ -153,6 +153,11 @@ h4,
   font-size: clamp(3.6rem, 3.1748031496rem + 1.1811023622vw, 4.8rem);
 }
 
+h5,
+.h5 {
+  font-size: clamp(2.8rem, 2.3748031496rem + 1.1811023622vw, 4rem);
+}
+
 /******************************/
 /********    ATOMS     ********/
 /******************************/
@@ -295,7 +300,18 @@ h4,
 /******************************/
 /********   ICONS      ********/
 /******************************/
-.icon-logo-vango-parchado, .icon-logo-vango-tours, .icon-logo-vango-business {
+/******************
+* El sistema de iconos se creo usando la paginas
+* https://icomoon.io/
+* Usuario: joan.cortes@grupocarrera.com.co
+* Clave: losamigos 
+*****************/
+/****************** 
+* Para añadir un nuevo icono hacerlo 
+* desde la pagina anterior y copiar
+* las fuentes y el css generado
+*****************/
+.icon-download-playstore, .icon-download-appstore, .icon-logo-vango-parchado, .icon-logo-vango-tours, .icon-logo-vango-business {
   display: inline-block;
   width: 4rem;
   aspect-ratio: 1;
@@ -304,10 +320,15 @@ h4,
   background-repeat: no-repeat;
 }
 
+.icon-download-playstore, .icon-download-appstore {
+  width: 14rem;
+  height: 4.7rem;
+}
+
 @font-face {
   font-family: "icons-vango";
-  src: url("../../fonts/icons-vango.eot?dpme1c");
-  src: url("../../fonts/icons-vango.eot?dpme1c#iefix") format("embedded-opentype"), url("../../fonts/icons-vango.ttf?dpme1c") format("truetype"), url("../../fonts/icons-vango.woff?dpme1c") format("woff"), url("../../fonts/icons-vango.svg?dpme1c#icons-vango") format("svg");
+  src: url("../../fonts/icons-vango.eot?lb517v");
+  src: url("../../fonts/icons-vango.eot?lb517v#iefix") format("embedded-opentype"), url("../../fonts/icons-vango.ttf?lb517v") format("truetype"), url("../../fonts/icons-vango.woff?lb517v") format("woff"), url("../../fonts/icons-vango.svg?lb517v#icons-vango") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -315,6 +336,7 @@ h4,
 [class^=icon-], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icons-vango" !important;
+  speak-as: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -325,12 +347,56 @@ h4,
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arquetipo-vango:before {
-  content: "\e900";
+.icon-whatsapp:before {
+  content: "\e90c";
 }
 
 .icon-logo-vango:before {
+  content: "\e90a";
+}
+
+.icon-arquetipo-vango:before {
+  content: "\e90b";
+}
+
+.icon-up-arrow-alt:before {
+  content: "\e900";
+}
+
+.icon-messenger:before {
+  content: "\e901";
+}
+
+.icon-pointer-map:before {
+  content: "\e902";
+}
+
+.icon-arrow-left:before {
+  content: "\e903";
+}
+
+.icon-arrow-right:before {
   content: "\e904";
+}
+
+.icon-envelope:before {
+  content: "\e905";
+}
+
+.icon-youtube:before {
+  content: "\e906";
+}
+
+.icon-facebook-circle:before {
+  content: "\e907";
+}
+
+.icon-facebook:before {
+  content: "\e908";
+}
+
+.icon-instagram:before {
+  content: "\e909";
 }
 
 .icon-logo-vango-business {
@@ -345,13 +411,32 @@ h4,
   background-image: url("../../icons/logo-vango-parchado.svg");
 }
 
+.icon-download-appstore {
+  background-image: url("../../icons/appstore.webp");
+}
+
+.icon-download-playstore {
+  background-image: url("../../icons/playstore.webp");
+}
+
+.icon-point {
+  width: 0.8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+
 /******************************/
 /********  COMPONENTS  ********/
 /******************************/
 /******************************/
 /********    LAYOUT    ********/
 /******************************/
-section,
+body {
+  background-color: #f9f9f9;
+}
+
+main > section,
 main {
   width: min(120rem, 100% - 4rem);
   margin-inline: auto;
@@ -374,7 +459,8 @@ main {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
+  top: 0;
   width: 100%;
   z-index: 1;
 }
@@ -433,6 +519,7 @@ input[type=checkbox] {
   font-weight: 400;
   padding: 0.4rem;
   color: #ffffff;
+  transition: color 300ms ease-in-out;
 }
 .navbar__link::after {
   position: absolute;
@@ -448,6 +535,68 @@ input[type=checkbox] {
   width: 100%;
 }
 
+.footer {
+  max-width: 120rem;
+  margin-inline: auto;
+}
+.footer__top {
+  padding-inline: 2rem;
+  background-color: #ae0441;
+  border-start-start-radius: 2.4rem;
+  border-start-end-radius: 2.4rem;
+}
+.footer__content__top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  color: #ffffff;
+}
+.footer__content__top > * {
+  flex: 1px;
+}
+.footer__address {
+  font-style: normal;
+}
+.footer__title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.footer__list {
+  display: grid;
+  row-gap: 1.2rem;
+}
+.footer__list__item {
+  display: grid;
+  align-items: baseline;
+  grid-template-columns: min-content 1fr;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  font-size: 1.8rem;
+}
+.footer__bottom {
+  position: relative;
+  padding-inline: 2rem;
+  background-color: #980338;
+  border-end-start-radius: 2.4rem;
+  border-end-end-radius: 2.4rem;
+}
+.footer .list__social-media {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 50%;
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+.footer .item__social-media {
+  padding: 0.4rem 1rem;
+  border: 4px solid #ae0441;
+  border-radius: 50%;
+  background-color: #980338;
+}
+
 /******************************/
 /********    PAGES     ********/
 /******************************/
@@ -455,59 +604,6 @@ input[type=checkbox] {
 /********   UTILITIES  ********/
 /******************************/
 /* Colores nuevos de las marcas */
-/******************************/
-/********   ICONS      ********/
-/******************************/
-.icon-logo-vango-business, .icon-logo-vango-tours, .icon-logo-vango-parchado {
-  display: inline-block;
-  width: 4rem;
-  aspect-ratio: 1;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-@font-face {
-  font-family: "icons-vango";
-  src: url("../../fonts/icons-vango.eot?dpme1c");
-  src: url("../../fonts/icons-vango.eot?dpme1c#iefix") format("embedded-opentype"), url("../../fonts/icons-vango.ttf?dpme1c") format("truetype"), url("../../fonts/icons-vango.woff?dpme1c") format("woff"), url("../../fonts/icons-vango.svg?dpme1c#icons-vango") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-[class^=icon-], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icons-vango" !important;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-arquetipo-vango:before {
-  content: "\e900";
-}
-
-.icon-logo-vango:before {
-  content: "\e904";
-}
-
-.icon-logo-vango-business {
-  background-image: url("../../icons/logo-vango-business.svg");
-}
-
-.icon-logo-vango-tours {
-  background-image: url("../../icons/logo-vango-tours.svg");
-}
-
-.icon-logo-vango-parchado {
-  background-image: url("../../icons/logo-vango-parchado.svg");
-}
-
 /* Crear espacios para los padding y margin */
 .mx-auto {
   margin-inline: auto;
@@ -1392,6 +1488,50 @@ input[type=checkbox] {
   filter: drop-shadow(0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.2));
 }
 
+.fs-5xl {
+  font-size: 7.2rem;
+}
+
+.fs-4xl {
+  font-size: 6.4rem;
+}
+
+.fs-3xl {
+  font-size: 5.6rem;
+}
+
+.fs-2xl {
+  font-size: 4.8rem;
+}
+
+.fs-xl {
+  font-size: 4rem;
+}
+
+.fs-l {
+  font-size: 3.6rem;
+}
+
+.fs-m {
+  font-size: 3.2rem;
+}
+
+.fs-s {
+  font-size: 2.8rem;
+}
+
+.fs-xs {
+  font-size: 2.4rem;
+}
+
+.fs-2xs {
+  font-size: 2rem;
+}
+
+.fs-3xs {
+  font-size: 1.8rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -1462,6 +1602,14 @@ input[type=checkbox] {
 
 .items-stretch {
   align-items: stretch;
+}
+
+.col-span-full {
+  grid-column: 1/-1;
+}
+
+.col-start-2 {
+  grid-column-start: 2;
 }
 
 .clr-magenta-0 {

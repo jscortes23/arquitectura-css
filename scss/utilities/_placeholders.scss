@@ -70,6 +70,14 @@
   align-items: stretch;
 }
 
+.col-span-full {
+  grid-column: 1/-1;
+}
+
+.col-start-2 {
+  grid-column-start: 2; 
+}
+
 @include class-color-and-background ($clr-magenta, "magenta");
 @include class-color-and-background ($clr-black, "black");
 @include class-color-and-background ($clr-orange, "orange");

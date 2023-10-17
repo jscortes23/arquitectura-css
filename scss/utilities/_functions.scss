@@ -1,7 +1,6 @@
 @use "sass:math";
 @use "../base/root";
 @use "../base/spacing";
-@use "../atoms/icons";
 
 /* Crear espacios para los padding y margin */
 
@@ -10,7 +9,7 @@
   @if ($model == "p") {
     $key: padding;
   }
-  .#{$model}x-auto{
+  .#{$model}x-auto {
     #{$key}-inline: auto;
   }
   @each $orientation, $direction in spacing.$directions {
@@ -24,7 +23,7 @@
 
 /* Crear tamaño de iconos */
 
-@each $sizeName, $size in icons.$size-icons {
+@each $sizeName, $size in root.$size-icons {
   .icon-#{$sizeName} {
     width: $size;
     aspect-ratio: 1;
@@ -37,5 +36,12 @@
   .#{$className} {
     $drop-shadow: map-get($propiedades, filter);
     filter: $drop-shadow;
+  }
+}
+
+// Crea clases de tamaño de fuente
+@each $size, $value in root.$font-size-scale {
+  .fs-#{$size} {
+    font-size: $value;
   }
 }

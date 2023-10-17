@@ -16,18 +16,6 @@
   font-display: swap;
 }
 
-$fs-5xl: 7.2rem;
-$fs-4xl: 6.4rem;
-$fs-3xl: 5.6rem;
-$fs-2xl: 4.8rem;
-$fs-xl: 4rem;
-$fs-l: 3.6rem;
-$fs-m: 3.2rem;
-$fs-s: 2.8rem;
-$fs-xs: 2.4rem;
-$fs-2xs: 2rem;
-$fs-3xs: 1.8rem;
-
 $fs-base: 2rem;
 
 $fs-btn: $fs-3xs;
@@ -72,4 +60,9 @@ h3,
 h4,
 .h4 {
   @include clamp-builder-font($min-width-rem, $max-width-rem, $fs-l, $fs-2xl);
+}
+
+h5,
+.h5 {
+  @include clamp-builder-font($min-width-rem, $max-width-rem, $fs-s, $fs-xl);
 }

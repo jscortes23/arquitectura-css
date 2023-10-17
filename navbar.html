@@ -4,55 +4,291 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barra de navegación</title>
-    <link rel="stylesheet" href="/css/main.min.css" />
-    <link rel="stylesheet" href="/css/main-large.min.css" media="(min-width: 1024px)" />
+    <link
+      rel="preload"
+      href="fonts/montserrat-variable-font_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      href="/css/main.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript> <link rel="stylesheet" href="/css/main.min.css" /></noscript>
+    <link
+      rel="stylesheet"
+      href="/css/main-large.min.css"
+      media="(min-width: 1024px)"
+    />
   </head>
   <body>
     <header class="header">
-      <a class="container-dotted-line drop-shadow-3 flex justify-center" style="
-      --corner-top-left-x: 0; 
-      --corner-top-left-y: 0; 
-      --corner-top-right-x: 8%; 
-      --corner-top-right-y: 30%; 
-      --corner-bottom-right-x: 30%; 
-      --corner-bottom-right-y: 37%; 
-      --corner-bottom-left-x: 100%; 
-      --corner-bottom-left-y: 66%;" href="/">
-        <span class="icon-logo-vango flex items-center clr-primary" aria-hidden="true"></span>
+      <a
+        class="container-dotted-line drop-shadow-3 flex justify-center"
+        style="
+          --corner-top-left-x: 0;
+          --corner-top-left-y: 0;
+          --corner-top-right-x: 8%;
+          --corner-top-right-y: 30%;
+          --corner-bottom-right-x: 30%;
+          --corner-bottom-right-y: 37%;
+          --corner-bottom-left-x: 100%;
+          --corner-bottom-left-y: 66%;
+        "
+        href="/"
+        aria-label="Icono vango"
+      >
+        <span
+          class="icon-logo-vango flex items-center clr-primary"
+          aria-hidden="true"
+        ></span>
       </a>
       <input type="checkbox" id="navbar-toogle" class="navbar-toogle" />
-      <nav class="navbar">
+      <nav class="navbar" role="navigation" aria-label="Menú de navegación">
         <ul class="navbar__menu">
-          <li class="navbar__item">
-            <a href="#" class="navbar__link">¿Quienes somos?</a>
+          <li class="navbar__item" aria-label="¿Quiénes somos?">
+            <a href="#" class="navbar__link">¿Quiénes somos?</a>
           </li>
-          <li class="navbar__item">
+          <li class="navbar__item" aria-label="Tours">
             <a href="#" class="navbar__link">Tours</a>
           </li>
-          <li class="navbar__item">
+          <li class="navbar__item" aria-label="Traslados">
             <a href="#" class="navbar__link">Traslados</a>
           </li>
-          <li class="navbar__item">
+          <li class="navbar__item" aria-label="Empresas">
             <a href="#" class="navbar__link">Empresas</a>
           </li>
-          <li class="navbar__item">
+          <li class="navbar__item" aria-label="Blog">
             <a href="#" class="navbar__link">Blog</a>
           </li>
-          <li class="navbar__item">
+          <li class="navbar__item" aria-label="Contáctanos">
             <a href="#" class="navbar__link">Contáctanos</a>
           </li>
-          <li class="navbar__item">
-            <buttton class="button--secondary rounded">Cotizar</buttton>
+          <li class="navbar__item" aria-label="Cotizar">
+            <a
+              href="https://share.hsforms.com/1iAxSXWNEQpaedBsJFh_EaA5kumj"
+              class="button--secondary rounded"
+              >Cotizar</a
+            >
           </li>
         </ul>
       </nav>
-      <label for="navbar-toogle" class="navbar-toogle-label button--navbar">
+      <label
+        for="navbar-toogle"
+        class="navbar-toogle-label button--navbar"
+        role="button"
+        aria-label="Alternar menú de navegación"
+      >
         <div></div>
         <div></div>
         <div></div>
       </label>
     </header>
-    <main>
+    <main id="header">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi maiores
+        eius labore, officia iure recusandae consectetur illum, id molestiae
+        similique illo autem culpa? Eos vitae voluptates ullam tempore illo
+        soluta expedita adipisci rem. Aspernatur sequi quia nisi quis aliquid
+        rerum odit corporis magnam veritatis laboriosam? Eius ut cumque porro
+        ipsam tempore veniam, asperiores numquam. Inventore iste maxime omnis
+        atque, quia magnam dolores corporis tenetur reprehenderit provident
+        reiciendis numquam pariatur porro minima sed dolorem eveniet? Ducimus
+        aperiam neque similique inventore expedita doloremque odio facere fuga
+        quibusdam? Excepturi odio id eveniet aspernatur veritatis sint eius
+        voluptate molestias dignissimos distinctio! Maiores, ea dolorum!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi maiores
+        eius labore, officia iure recusandae consectetur illum, id molestiae
+        similique illo autem culpa? Eos vitae voluptates ullam tempore illo
+        soluta expedita adipisci rem. Aspernatur sequi quia nisi quis aliquid
+        rerum odit corporis magnam veritatis laboriosam? Eius ut cumque porro
+        ipsam tempore veniam, asperiores numquam. Inventore iste maxime omnis
+        atque, quia magnam dolores corporis tenetur reprehenderit provident
+        reiciendis numquam pariatur porro minima sed dolorem eveniet? Ducimus
+        aperiam neque similique inventore expedita doloremque odio facere fuga
+        quibusdam? Excepturi odio id eveniet aspernatur veritatis sint eius
+        voluptate molestias dignissimos distinctio! Maiores, ea dolorum!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi maiores
+        eius labore, officia iure recusandae consectetur illum, id molestiae
+        similique illo autem culpa? Eos vitae voluptates ullam tempore illo
+        soluta expedita adipisci rem. Aspernatur sequi quia nisi quis aliquid
+        rerum odit corporis magnam veritatis laboriosam? Eius ut cumque porro
+        ipsam tempore veniam, asperiores numquam. Inventore iste maxime omnis
+        atque, quia magnam dolores corporis tenetur reprehenderit provident
+        reiciendis numquam pariatur porro minima sed dolorem eveniet? Ducimus
+        aperiam neque similique inventore expedita doloremque odio facere fuga
+        quibusdam? Excepturi odio id eveniet aspernatur veritatis sint eius
+        voluptate molestias dignissimos distinctio! Maiores, ea dolorum!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi maiores
+        eius labore, officia iure recusandae consectetur illum, id molestiae
+        similique illo autem culpa? Eos vitae voluptates ullam tempore illo
+        soluta expedita adipisci rem. Aspernatur sequi quia nisi quis aliquid
+        rerum odit corporis magnam veritatis laboriosam? Eius ut cumque porro
+        ipsam tempore veniam, asperiores numquam. Inventore iste maxime omnis
+        atque, quia magnam dolores corporis tenetur reprehenderit provident
+        reiciendis numquam pariatur porro minima sed dolorem eveniet? Ducimus
+        aperiam neque similique inventore expedita doloremque odio facere fuga
+        quibusdam? Excepturi odio id eveniet aspernatur veritatis sint eius
+        voluptate molestias dignissimos distinctio! Maiores, ea dolorum!
+      </p>
     </main>
+    <footer class="footer mb-4">
+      <section class="footer__top py-8">
+        <div class="footer__content__top">
+          <address class="footer__address">
+            <span class="footer__title">Nos encuentras en</span>
+            <ul class="footer__list mt-4">
+              <li class="footer__list__item">
+                <span class="icon-pointer-map" aria-hidden="true"></span>
+                <a
+                  href="https://www.google.com/maps/place/N. 25H - 45, Oficina 306, Cra. 102a, Bogotá"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Cra 102a #25h-45 ofc. 306, Bogotá, Cundinamarca</a
+                >
+              </li>
+              <li class="footer__list__item">
+                <span class="icon-envelope" aria-hidden="true"></span>
+                <a href="mailto:comunicaciones@vango.com.co"
+                  >comunicaciones@vango.com.co</a
+                >
+              </li>
+              <li class="footer__list__item">
+                <span class="icon-whatsapp" aria-hidden="true"></span>
+                <a href="tel:+573112030752">311-2030752</a>
+                <p class="col-start-2">
+                  Para cotizaciones de traslados aeropuerto y otros servicios de
+                  transporte
+                </p>
+              </li>
+              <li class="footer__list__item">
+                <span class="icon-whatsapp" aria-hidden="true"></span>
+                <a href="tel:+573112030743">311-2030743</a>
+                <p class="col-start-2">Para cotizaciones de tours</p>
+              </li>
+            </ul>
+          </address>
+          <section>
+            <span class="footer__title">Ayuda</span>
+            <ul class="footer__list mt-4">
+              <li class="footer__list__item">
+                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+                <a href="https://vango.com.co/preguntas-frecuentes"
+                  >Preguntas frecuentes</a
+                >
+              </li>
+              <li class="footer__list__item">
+                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+                <a href="https://vango.com.co/tratamiento-datos"
+                  >Política tratamiento de datos</a
+                >
+              </li>
+              <li class="footer__list__item">
+                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+                <a href="https://vango.com.co/termino-condiciones"
+                  >Aplica terminos y condiciones</a
+                >
+              </li>
+            </ul>
+          </section>
+          <section>
+            <span class="footer__title">Información</span>
+            <ul class="footer__list mt-4">
+              <li class="footer__list__item">
+                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+                <a href="https://vango.com.co/quienes-somos">¿Quiénes somos?</a>
+              </li>
+              <li class="footer__list__item">
+                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+                <a href="https://vango.com.co/como-funciona">¿Cómo funciona?</a>
+              </li>
+              <li class="footer__list__item">
+                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+                <a href="https://vango.com.co/viajes-eventos"
+                  >Viajes y eventos</a
+                >
+              </li>
+              <li class="footer__list__item">
+                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+                <a href="https://vango.com.co/empresas">Empresas</a>
+              </li>
+              <li class="footer__list__item">
+                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+                <a href="https://vango.com.co/blog">Blog</a>
+              </li>
+              <li class="footer__list__item">
+                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+                <a href="https://vango.com.co/blog">Contactos</a>
+              </li>
+            </ul>
+          </section>
+          <section class="flex flex-column items-center">
+            <span class="icon-logo-vango clr-black-0 fs-4xl"></span>
+            <p class="my-4">
+              Se crea al ver la necesidad de los ciudadanos por un transporte
+              que sea: seguro, inteligente y cómodo.
+            </p>
+            <a
+              href="https://share.hsforms.com/1iAxSXWNEQpaedBsJFh_EaA5kumj"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              class="button--secondary rounded"
+              >Cotizar</a
+            >
+            <a
+              href="https://play.google.com/store/apps/details?id=com.ionverse.vango.taxis&hl=es"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              class="my-4"
+              aria-label="Descargar en Play Store"
+            >
+              <span class="icon-download-playstore" aria-hidden="true"></span>
+            </a>
+            <a
+              href="https://apps.apple.com/co/app/vango/id1555567408"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label="Descargar en App Store"
+            >
+              <span class="icon-download-appstore" aria-hidden="true"></span>
+            </a>
+          </section>
+        </div>
+      </section>
+      <section class="footer__bottom pt-10 pb-4 flex items-center clr-black-0">
+        <ul class="list__social-media flex fs-xs">
+          <li class="item__social-media">
+            <a href="#" aria-label="Facebook">
+              <span class="icon-facebook" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li class="item__social-media">
+            <a href="#" aria-label="Instagram">
+              <span class="icon-instagram" aria-hidden="true"></span>
+            </a>
+          </li>
+          <li class="item__social-media">
+            <a href="#" aria-label="YouTube">
+              <span class="icon-youtube" aria-hidden="true"></span>
+            </a>
+          </li>
+        </ul>
+        <small class="fs-2xs"
+          >&COPY; Vango Colombia. Todos los derechos reservados.</small
+        >
+        <a href="#header" class="clr-secondary"
+          >Volver arriba <span class="icon-up-arrow-alt"></span
+        ></a>
+      </section>
+    </footer>
   </body>
 </html>

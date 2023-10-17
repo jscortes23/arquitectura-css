@@ -2,6 +2,19 @@
 /********   ICONS      ********/
 /******************************/
 
+/******************
+* El sistema de iconos se creo usando la paginas
+* https://icomoon.io/
+* Usuario: joan.cortes@grupocarrera.com.co
+* Clave: losamigos 
+*****************/
+
+/****************** 
+* Para añadir un nuevo icono hacerlo 
+* desde la pagina anterior y copiar
+* las fuentes y el css generado
+*****************/
+
 $font-icon-path: '../../fonts/';
 $icon-path: '../../icons/';
 
@@ -14,25 +27,18 @@ $icon-path: '../../icons/';
   background-repeat: no-repeat;
 }
 
-$size-icons: (
-  3xs: 1.6rem,
-  2xs: 2.4rem,
-  xs: 3.2rem,
-  s: 4.8rem,
-  m: 6.4rem,
-  l: 7.2rem,
-  xl: 12.8rem,
-  2xl: 25.6rem,
-  3xl: 51.2rem
-);
+%icon-download {
+  width: 14rem;
+  height: 4.7rem;
+}
 
 @font-face {
   font-family: 'icons-vango';
-  src:  url($font-icon-path + 'icons-vango.eot?dpme1c');
-  src:  url($font-icon-path + 'icons-vango.eot?dpme1c#iefix') format('embedded-opentype'),
-    url($font-icon-path + 'icons-vango.ttf?dpme1c') format('truetype'),
-    url($font-icon-path + 'icons-vango.woff?dpme1c') format('woff'),
-    url($font-icon-path + 'icons-vango.svg?dpme1c#icons-vango') format('svg');
+  src:  url($font-icon-path + 'icons-vango.eot?lb517v');
+  src:  url($font-icon-path + 'icons-vango.eot?lb517v#iefix') format('embedded-opentype'),
+    url($font-icon-path + 'icons-vango.ttf?lb517v') format('truetype'),
+    url($font-icon-path + 'icons-vango.woff?lb517v') format('woff'),
+    url($font-icon-path + 'icons-vango.svg?lb517v#icons-vango') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -41,6 +47,7 @@ $size-icons: (
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons-vango' !important;
+  speak-as: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -52,12 +59,44 @@ $size-icons: (
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-whatsapp:before {
+  content: "\e90c";
+}
+.icon-logo-vango:before {
+  content: "\e90a";
+}
 .icon-arquetipo-vango:before {
+  content: "\e90b";
+}
+.icon-up-arrow-alt:before {
   content: "\e900";
 }
-
-.icon-logo-vango:before {
+.icon-messenger:before {
+  content: "\e901";
+}
+.icon-pointer-map:before {
+  content: "\e902";
+}
+.icon-arrow-left:before {
+  content: "\e903";
+}
+.icon-arrow-right:before {
   content: "\e904";
+}
+.icon-envelope:before {
+  content: "\e905";
+}
+.icon-youtube:before {
+  content: "\e906";
+}
+.icon-facebook-circle:before {
+  content: "\e907";
+}
+.icon-facebook:before {
+  content: "\e908";
+}
+.icon-instagram:before {
+  content: "\e909";
 }
 
 .icon-logo-vango-business {
@@ -73,4 +112,21 @@ $size-icons: (
 .icon-logo-vango-parchado {
   @extend %icon;
   background-image: url($icon-path + 'logo-vango-parchado.svg');
+}
+
+.icon-download-appstore {
+  @extend %icon, %icon-download;
+  background-image: url($icon-path + 'appstore.webp');
+}
+
+.icon-download-playstore {
+  @extend %icon, %icon-download;
+  background-image: url($icon-path + 'playstore.webp');
+}
+
+.icon-point {
+  width: .8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: currentColor;
 }
