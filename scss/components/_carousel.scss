@@ -1,0 +1,122 @@
+.container__slider {
+  position: relative;
+  width: calc(100% - 5rem);
+  max-height: 52rem;
+  aspect-ratio: 16/9;
+  padding: 1rem;
+  margin-inline: auto;
+
+  &.container-dotted-line {
+    border-radius: $rounded-md;
+  }
+  &.container-dotted-line::after {
+    inset: 0;
+    z-index: 1;
+  }
+
+  &:hover {
+    .slider__button--left,
+    .slider__button--right {
+      opacity: 1;
+    }
+  }
+}
+
+$bg-btns-slider: rgba(0, 0, 0, 0.258);
+
+.slider {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: calc($rounded-md - 0.5rem);
+
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  pointer-events: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    height: 100%;
+    scroll-snap-align: start;
+  }
+
+  &__button {
+
+    &--left,
+    &--right {
+      @extend %btn;
+      position: absolute;
+      top: 50%;
+      z-index: 3;
+      width: 8rem;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      color: map-get($clr-black, 0);
+      font-size: $fs-m;
+      border-radius: 0;
+      background-color: $bg-btns-slider;
+      cursor: pointer;
+      transition: 
+        color 200ms ease-in-out, 
+        background-color 200ms ease-in-out,
+        opacity 200ms ease-in-out;
+      transform: translateY(-50%);
+      transform-origin: left;
+      opacity: 0;
+    }
+
+    &--right {
+      right: 1rem;
+    }
+
+    &--left:hover,
+    &--right:hover {
+      background-color: map-get($clr-black, 0);
+      color: $bg-btns-slider;
+    }
+
+    &--left::after,
+    &--right::after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      width: inherit;
+      aspect-ratio: 1;
+      transform: scaleX(0);
+      transition: transform ease-in 200ms;
+    }
+
+    &--left:hover::after {
+      background-color: $clr-alert;
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+
+    &--left:not(:hover)::after {
+      background-color: $clr-alert;
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+
+    &--right:hover::after {
+      background-color: $clr-alert;
+      left: -100%;
+      transform-origin: right;
+      transform: scaleX(1);
+    }
+
+    &--right:not(:hover)::after {
+      background-color: $clr-alert;
+      left: -100%;
+      transform-origin: right;
+      transform: scaleX(0);
+    }
+  }
+}

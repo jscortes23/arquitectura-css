@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Barra de navegación</title>
+    <meta name="color-schema" content="dark light">
+    <meta name="theme-color" content="#980338" />
     <link
       rel="preload"
       href="fonts/montserrat-variable-font_wght.ttf"
@@ -23,6 +25,8 @@
       href="/css/main-large.min.css"
       media="(min-width: 1024px)"
     />
+    <script defer src="js/main.js"></script>
+    <script defer src="js/upcounter.js" type="module"></script>
   </head>
   <body>
     <header class="header">
@@ -79,67 +83,68 @@
       <label
         for="navbar-toogle"
         class="navbar-toogle-label button--navbar"
-        role="button"
         aria-label="Alternar menú de navegación"
+        aria-labelledby="navbar-toogle"
       >
         <div></div>
         <div></div>
         <div></div>
       </label>
     </header>
-    <main id="header">
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi maiores
-        eius labore, officia iure recusandae consectetur illum, id molestiae
-        similique illo autem culpa? Eos vitae voluptates ullam tempore illo
-        soluta expedita adipisci rem. Aspernatur sequi quia nisi quis aliquid
-        rerum odit corporis magnam veritatis laboriosam? Eius ut cumque porro
-        ipsam tempore veniam, asperiores numquam. Inventore iste maxime omnis
-        atque, quia magnam dolores corporis tenetur reprehenderit provident
-        reiciendis numquam pariatur porro minima sed dolorem eveniet? Ducimus
-        aperiam neque similique inventore expedita doloremque odio facere fuga
-        quibusdam? Excepturi odio id eveniet aspernatur veritatis sint eius
-        voluptate molestias dignissimos distinctio! Maiores, ea dolorum!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi maiores
-        eius labore, officia iure recusandae consectetur illum, id molestiae
-        similique illo autem culpa? Eos vitae voluptates ullam tempore illo
-        soluta expedita adipisci rem. Aspernatur sequi quia nisi quis aliquid
-        rerum odit corporis magnam veritatis laboriosam? Eius ut cumque porro
-        ipsam tempore veniam, asperiores numquam. Inventore iste maxime omnis
-        atque, quia magnam dolores corporis tenetur reprehenderit provident
-        reiciendis numquam pariatur porro minima sed dolorem eveniet? Ducimus
-        aperiam neque similique inventore expedita doloremque odio facere fuga
-        quibusdam? Excepturi odio id eveniet aspernatur veritatis sint eius
-        voluptate molestias dignissimos distinctio! Maiores, ea dolorum!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi maiores
-        eius labore, officia iure recusandae consectetur illum, id molestiae
-        similique illo autem culpa? Eos vitae voluptates ullam tempore illo
-        soluta expedita adipisci rem. Aspernatur sequi quia nisi quis aliquid
-        rerum odit corporis magnam veritatis laboriosam? Eius ut cumque porro
-        ipsam tempore veniam, asperiores numquam. Inventore iste maxime omnis
-        atque, quia magnam dolores corporis tenetur reprehenderit provident
-        reiciendis numquam pariatur porro minima sed dolorem eveniet? Ducimus
-        aperiam neque similique inventore expedita doloremque odio facere fuga
-        quibusdam? Excepturi odio id eveniet aspernatur veritatis sint eius
-        voluptate molestias dignissimos distinctio! Maiores, ea dolorum!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi maiores
-        eius labore, officia iure recusandae consectetur illum, id molestiae
-        similique illo autem culpa? Eos vitae voluptates ullam tempore illo
-        soluta expedita adipisci rem. Aspernatur sequi quia nisi quis aliquid
-        rerum odit corporis magnam veritatis laboriosam? Eius ut cumque porro
-        ipsam tempore veniam, asperiores numquam. Inventore iste maxime omnis
-        atque, quia magnam dolores corporis tenetur reprehenderit provident
-        reiciendis numquam pariatur porro minima sed dolorem eveniet? Ducimus
-        aperiam neque similique inventore expedita doloremque odio facere fuga
-        quibusdam? Excepturi odio id eveniet aspernatur veritatis sint eius
-        voluptate molestias dignissimos distinctio! Maiores, ea dolorum!
-      </p>
+    <main id="main">
+      <div class="container__slider container-dotted-line">
+        <button class="slider__button--left icon-arrow-left" aria-hidden="true"></button>
+        <ul class="slider">
+          <li class="slider__item">
+            <picture class="">
+              <source media="(max-width: )" srcset="">
+              <source media="(min-width: 768px)" srcset="public/assets/slider/1.webp">
+              <img src="public/assets/slider/2.webp" alt="">
+            </picture>
+          </li>
+          <li class="slider__item">
+            <picture class="">
+              <source media="(min-width: )" srcset="">
+              <source media="(min-width: )" srcset="">
+              <img src="public/assets/slider/1.webp" alt="">
+            </picture>
+          </li>
+          <li class="slider__item">
+            <picture class="">
+              <source media="(min-width: )" srcset="">
+              <source media="(min-width: )" srcset="">
+              <img src="public/assets/slider/3.webp" alt="">
+            </picture>
+          </li>
+          <li class="slider__item">
+            <picture class="">
+              <source media="(min-width: )" srcset="">
+              <source media="(min-width: )" srcset="">
+              <img src="public/assets/slider/4.webp" alt="">
+            </picture>
+          </li>
+        </ul>       
+        <button class="slider__button--right icon-arrow-right" aria-hidden="true"></button>
+      </div>
+      <section class="container-3">
+        <header class="">
+          <h2 class="h2 clr-primary mb-12">Alquiler de vans de transporte especial de pasajeros para todo tipo de ocasión 🚐</h2>
+        </header>
+        <section class="flex flex-wrap justify-around my-12">
+          <div class="flex flex-column items-center">
+            <span class="clr-secondary fs-4xl" data-count="persons" data-limit-count="10000">10000</span>
+            <p class="flex flex-column items-center clr-primary fs-xs">Personas <b>Transportadas al mes</b></p>
+          </div>
+          <div class="flex flex-column items-center">
+            <span class="clr-secondary fs-4xl" data-count="enterprises" data-limit-count="50">+ 50</span>
+            <p class="flex flex-column items-center clr-primary fs-xs">Empresas <b>Han confiado en nosotros</b></p>
+          </div>
+          <div class="flex flex-column items-center">
+            <span class="clr-secondary fs-4xl" data-count="vehicles" data-limit-count="300">+ 300</span>
+            <p class="flex flex-column items-center clr-primary fs-xs">Vehiculos <b>Afiliados</b></p>
+          </div>
+        </section>
+      </section>
     </main>
     <footer class="footer mb-4">
       <section class="footer__top py-8">
@@ -147,7 +152,7 @@
           <address class="footer__address">
             <span class="footer__title">Nos encuentras en</span>
             <ul class="footer__list mt-4">
-              <li class="footer__list__item">
+              <li class="footer__list__item" aria-label="Dirección de oficina">
                 <span class="icon-pointer-map" aria-hidden="true"></span>
                 <a
                   href="https://www.google.com/maps/place/N. 25H - 45, Oficina 306, Cra. 102a, Bogotá"
@@ -156,13 +161,13 @@
                   >Cra 102a #25h-45 ofc. 306, Bogotá, Cundinamarca</a
                 >
               </li>
-              <li class="footer__list__item">
+              <li class="footer__list__item" aria-label="Correo electronico">
                 <span class="icon-envelope" aria-hidden="true"></span>
                 <a href="mailto:comunicaciones@vango.com.co"
                   >comunicaciones@vango.com.co</a
                 >
               </li>
-              <li class="footer__list__item">
+              <li class="footer__list__item" aria-label="Número telefónico para cotizaciones de traslados">
                 <span class="icon-whatsapp" aria-hidden="true"></span>
                 <a href="tel:+573112030752">311-2030752</a>
                 <p class="col-start-2">
@@ -170,7 +175,7 @@
                   transporte
                 </p>
               </li>
-              <li class="footer__list__item">
+              <li class="footer__list__item" aria-label="Número telefónico para cotizaciones para tours">
                 <span class="icon-whatsapp" aria-hidden="true"></span>
                 <a href="tel:+573112030743">311-2030743</a>
                 <p class="col-start-2">Para cotizaciones de tours</p>
@@ -180,20 +185,29 @@
           <section>
             <span class="footer__title">Ayuda</span>
             <ul class="footer__list mt-4">
-              <li class="footer__list__item">
-                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+              <li class="footer__list__item" aria-label="Preguntas frecuentes">
+                <span
+                  class="icon-point clr-secondary"
+                  aria-hidden="true"
+                ></span>
                 <a href="https://vango.com.co/preguntas-frecuentes"
                   >Preguntas frecuentes</a
                 >
               </li>
-              <li class="footer__list__item">
-                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+              <li class="footer__list__item" aria-label="Política de tratamiento de datos">
+                <span
+                  class="icon-point clr-secondary"
+                  aria-hidden="true"
+                ></span>
                 <a href="https://vango.com.co/tratamiento-datos"
                   >Política tratamiento de datos</a
                 >
               </li>
-              <li class="footer__list__item">
-                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+              <li class="footer__list__item" aria-label="Terminos y condiciones">
+                <span
+                  class="icon-point clr-secondary"
+                  aria-hidden="true"
+                ></span>
                 <a href="https://vango.com.co/termino-condiciones"
                   >Aplica terminos y condiciones</a
                 >
@@ -203,30 +217,48 @@
           <section>
             <span class="footer__title">Información</span>
             <ul class="footer__list mt-4">
-              <li class="footer__list__item">
-                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+              <li class="footer__list__item" aria-label="¿Quiénes somos?">
+                <span
+                  class="icon-point clr-secondary"
+                  aria-hidden="true"
+                ></span>
                 <a href="https://vango.com.co/quienes-somos">¿Quiénes somos?</a>
               </li>
-              <li class="footer__list__item">
-                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+              <li class="footer__list__item" aria-label="¿Cómo funciona?">
+                <span
+                  class="icon-point clr-secondary"
+                  aria-hidden="true"
+                ></span>
                 <a href="https://vango.com.co/como-funciona">¿Cómo funciona?</a>
               </li>
-              <li class="footer__list__item">
-                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+              <li class="footer__list__item" aria-label="Viajes y eventos">
+                <span
+                  class="icon-point clr-secondary"
+                  aria-hidden="true"
+                ></span>
                 <a href="https://vango.com.co/viajes-eventos"
                   >Viajes y eventos</a
                 >
               </li>
-              <li class="footer__list__item">
-                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+              <li class="footer__list__item" aria-label="Empresas">
+                <span
+                  class="icon-point clr-secondary"
+                  aria-hidden="true"
+                ></span>
                 <a href="https://vango.com.co/empresas">Empresas</a>
               </li>
-              <li class="footer__list__item">
-                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+              <li class="footer__list__item" aria-label="Blog">
+                <span
+                  class="icon-point clr-secondary"
+                  aria-hidden="true"
+                ></span>
                 <a href="https://vango.com.co/blog">Blog</a>
               </li>
-              <li class="footer__list__item">
-                <span class="icon-point clr-secondary" aria-hidden="true"></span>
+              <li class="footer__list__item" aria-label="Contactos">
+                <span
+                  class="icon-point clr-secondary"
+                  aria-hidden="true"
+                ></span>
                 <a href="https://vango.com.co/blog">Contactos</a>
               </li>
             </ul>
@@ -264,7 +296,9 @@
           </section>
         </div>
       </section>
-      <section class="footer__bottom pt-10 pb-4 flex items-center clr-black-0">
+      <section
+        class="footer__bottom pt-10 pb-7 flex items-center justify-center clr-black-0"
+      >
         <ul class="list__social-media flex fs-xs">
           <li class="item__social-media">
             <a href="#" aria-label="Facebook">
@@ -282,10 +316,10 @@
             </a>
           </li>
         </ul>
-        <small class="fs-2xs"
+        <small class="fs-2xs text-center"
           >&COPY; Vango Colombia. Todos los derechos reservados.</small
         >
-        <a href="#header" class="clr-secondary"
+        <a href="#main" class="clr-secondary"
           >Volver arriba <span class="icon-up-arrow-alt"></span
         ></a>
       </section>

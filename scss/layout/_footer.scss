@@ -66,4 +66,12 @@
     border-radius: 50%;
     background-color: map-get($clr-magenta, 90);
   }
+
+  [href="#main"] {
+    width: max-content;
+    position: absolute;
+    top: 57%;
+    transform: translate(-100%, -50%);
+    left: calc(100% - 2rem);
+  }
 }

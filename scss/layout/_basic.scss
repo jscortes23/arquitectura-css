@@ -4,9 +4,13 @@ body {
   background-color: $clr-bg-main;
 }
 
-main > section,
 main {
-  @include mixins.max-width;
+  scroll-margin-block-start: 7.2rem;
+  
+  > section {
+    @include mixins.max-width;
+  }
+
 }
 
 .container-dotted-line {
