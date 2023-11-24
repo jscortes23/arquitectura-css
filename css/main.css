@@ -164,7 +164,7 @@ h5,
 /******************************/
 /********   BUTTONS    ********/
 /******************************/
-.slider__button--left, .slider__button--right, .button--link, .button--tertiary, .button--secondary, .button--primary {
+.slider-main__button--left, .slider-main__button--right, .button--link, .button--tertiary, .button--secondary, .button--primary {
   display: inline-flex;
   align-items: center;
   -moz-column-gap: 1rem;
@@ -176,11 +176,11 @@ h5,
   border-radius: 0.8rem;
   transition: background-color 100ms ease-in-out, color 100ms ease-in-out;
 }
-.slider__button--left > svg, .slider__button--right > svg, .button--link > svg, .button--tertiary > svg, .button--secondary > svg, .button--primary > svg {
+.slider-main__button--left > svg, .slider-main__button--right > svg, .button--link > svg, .button--tertiary > svg, .button--secondary > svg, .button--primary > svg {
   width: 2.4rem;
   height: 2.4rem;
 }
-.slider__button--left > span, .slider__button--right > span, .button--link > span, .button--tertiary > span, .button--secondary > span, .button--primary > span {
+.slider-main__button--left > span, .slider-main__button--right > span, .button--link > span, .button--tertiary > span, .button--secondary > span, .button--primary > span {
   width: 2.4rem;
   height: 2.4rem;
 }
@@ -429,7 +429,7 @@ h5,
 /******************************/
 /********  COMPONENTS  ********/
 /******************************/
-.container__slider {
+.container__slider-main {
   position: relative;
   width: calc(100% - 5rem);
   max-height: 52rem;
@@ -437,19 +437,19 @@ h5,
   padding: 1rem;
   margin-inline: auto;
 }
-.container__slider.container-dotted-line {
+.container__slider-main.container-dotted-line {
   border-radius: 1.6rem;
 }
-.container__slider.container-dotted-line::after {
+.container__slider-main.container-dotted-line::after {
   inset: 0;
   z-index: 1;
 }
-.container__slider:hover .slider__button--left,
-.container__slider:hover .slider__button--right {
+.container__slider-main:hover .slider-main__button--left,
+.container__slider-main:hover .slider-main__button--right {
   opacity: 1;
 }
 
-.slider {
+.slider-main {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -461,14 +461,14 @@ h5,
   overflow-y: scroll;
   pointer-events: none;
 }
-.slider::-webkit-scrollbar {
+.slider-main::-webkit-scrollbar {
   display: none;
 }
-.slider__item {
+.slider-main__item {
   height: 100%;
   scroll-snap-align: start;
 }
-.slider__button--left, .slider__button--right {
+.slider-main__button--left, .slider-main__button--right {
   position: absolute;
   top: 50%;
   z-index: 3;
@@ -486,14 +486,14 @@ h5,
   transform-origin: left;
   opacity: 0;
 }
-.slider__button--right {
+.slider-main__button--right {
   right: 1rem;
 }
-.slider__button--left:hover, .slider__button--right:hover {
+.slider-main__button--left:hover, .slider-main__button--right:hover {
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.258);
 }
-.slider__button--left::after, .slider__button--right::after {
+.slider-main__button--left::after, .slider-main__button--right::after {
   content: "";
   position: absolute;
   left: 100%;
@@ -502,23 +502,23 @@ h5,
   transform: scaleX(0);
   transition: transform ease-in 200ms;
 }
-.slider__button--left:hover::after {
+.slider-main__button--left:hover::after {
   background-color: #f6ff51;
   transform-origin: left;
   transform: scaleX(1);
 }
-.slider__button--left:not(:hover)::after {
+.slider-main__button--left:not(:hover)::after {
   background-color: #f6ff51;
   transform-origin: left;
   transform: scaleX(0);
 }
-.slider__button--right:hover::after {
+.slider-main__button--right:hover::after {
   background-color: #f6ff51;
   left: -100%;
   transform-origin: right;
   transform: scaleX(1);
 }
-.slider__button--right:not(:hover)::after {
+.slider-main__button--right:not(:hover)::after {
   background-color: #f6ff51;
   left: -100%;
   transform-origin: right;

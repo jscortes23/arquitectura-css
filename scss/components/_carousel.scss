@@ -1,4 +1,4 @@
-.container__slider {
+.container__slider-main {
   position: relative;
   width: calc(100% - 5rem);
   max-height: 52rem;
@@ -15,8 +15,8 @@
   }
 
   &:hover {
-    .slider__button--left,
-    .slider__button--right {
+    .slider-main__button--left,
+    .slider-main__button--right {
       opacity: 1;
     }
   }
@@ -24,7 +24,7 @@
 
 $bg-btns-slider: rgba(0, 0, 0, 0.258);
 
-.slider {
+.slider-main {
   position: relative;
   z-index: 2;
   width: 100%;

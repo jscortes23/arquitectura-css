@@ -25,12 +25,11 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         entry.target.classList.toggle("active", entry.isIntersecting)
         entry.target.setAttribute("style", "background-color: red")
-        console.log(entry.target)
+        // console.log(entry.target)
         // if (entry.isIntersecting) observer.unobserve(entry.target)
     },
-    options
-)
-    console.log(entries)
+        options
+    )
 });
 
 sliderItems.forEach(slide => {
