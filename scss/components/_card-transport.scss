@@ -1,0 +1,79 @@
+@import "../utilities/mixins";
+
+$shadow-card-transport: 0.3rem 0.3rem 0.6rem rgb(142 162 189 / 20%); 
+
+.card-transport {
+    position: relative;
+    display: grid;
+    grid-template-rows: min-content;
+    row-gap: 1.4rem;
+    aspect-ratio: 4/5;
+
+    width: 100%;
+    min-width: 24rem;
+    max-width: 32rem;
+
+    background-color: map-get($clr-black, 0);
+    border-radius: $rounded-md;
+    box-shadow: $shadow-card-transport;
+
+    &__float-icon {
+        position: absolute;
+        top: -5%;
+        right: -10%;
+        transform: rotateZ(-15deg);
+        width: 60%;
+        max-width: 18rem;
+
+        .container-dotted-line {
+            display: flex;
+            place-content: center;
+            border-radius: 12rem;
+            box-shadow: $shadow-card-transport;
+
+            > [class^="icon-logo-"] {
+                width: 74%;
+                max-height: 13rem;
+                transform: rotateZ(15deg);
+            }
+        }
+
+        .container-dotted-line::after {
+            inset: -0.4rem 0.4rem;
+        }
+    }
+
+    &__img {
+        padding: 1rem;
+        padding-block-end: 0;
+        aspect-ratio: 2/1;
+        border-top-left-radius: $rounded-md;
+        border-top-right-radius: $rounded-md;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 0.4rem;
+        padding-inline: 2rem;
+        padding-block-end: 2rem;
+    }
+
+    $min-width-rem: 19rem;
+    $max-width-rem: 28rem;
+    &__title {
+        text-align: center;
+        @include clamp-builder-font($min-width-rem, $max-width-rem, $fs-xs, $fs-3xs);
+        text-transform: capitalize;
+    }
+
+    &__description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+        font-size: $fs-3xs;
+        text-align: center;
+    }
+}

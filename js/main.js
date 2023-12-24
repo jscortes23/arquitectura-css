@@ -1,9 +1,9 @@
-let containerSlider = document.querySelector('.container__slider')
-let slider = document.querySelector('.slider')
-let sliderButtons = document.querySelector('.slider__buttons')
-let sliderItem = document.querySelector('.slider__item')
-let sliderButtonLeft = document.querySelector('.slider__button--left')
-let sliderButtonRight = document.querySelector('.slider__button--right')
+let containerSlider = document.querySelector('.container__slider-main')
+let slider = document.querySelector('.slider-main')
+
+let sliderItem = document.querySelector('.slider-main__item')
+let sliderButtonLeft = document.querySelector('.slider-main__button--left')
+let sliderButtonRight = document.querySelector('.slider-main__button--right')
 
 sliderButtonLeft.addEventListener('click', () => {
     slider.scrollTop -= sliderItem.clientHeight;

@@ -1,3 +1,5 @@
+@import "../utilities/mixins";
+
 .container__slider-main {
   position: relative;
   width: calc(100% - 5rem);
@@ -31,10 +33,7 @@ $bg-btns-slider: rgba(0, 0, 0, 0.258);
   height: 100%;
   border-radius: calc($rounded-md - 0.5rem);
 
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  @include slider-y;
   pointer-events: none;
 
   &::-webkit-scrollbar {

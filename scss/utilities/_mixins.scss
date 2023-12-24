@@ -85,3 +85,17 @@
     }
   }
 }
+
+@mixin slider-x {
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+@mixin slider-y {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

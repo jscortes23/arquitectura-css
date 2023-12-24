@@ -19,14 +19,15 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript> <link rel="stylesheet" href="/css/main.min.css" /></noscript>
+    <noscript><link rel="stylesheet" href="/css/main.min.css" /></noscript>
     <link
       rel="stylesheet"
       href="/css/main-large.min.css"
       media="(min-width: 1024px)"
     />
-    <script defer src="js/main.js"></script>
-    <script defer src="js/upcounter.js" type="module"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/upcounter.js"></script>
+    <script defer src="js/carouselTransport.js"></script>
   </head>
   <body>
     <header class="header">
@@ -93,7 +94,9 @@
     </header>
     <main id="main">
       <div class="container__slider-main container-dotted-line">
-        <button class="slider__button--left icon-arrow-left" aria-hidden="true"></button>
+        <button class="slider-main__button--left">
+          <span class="icon-arrow-left" aria-hidden="true"></span>
+        </button>
         <ul class="slider-main">
           <li class="slider-main__item">
             <picture class="">
@@ -124,7 +127,9 @@
             </picture>
           </li>
         </ul>       
-        <button class="slider-main__button--right icon-arrow-right" aria-hidden="true"></button>
+        <button class="slider-main__button--right">
+          <span class="icon-arrow-right" aria-hidden="true"></span>
+        </button>
       </div>
       <section class="container__count-up">
         <h2 class="h2 clr-primary mb-12">Alquiler de vans de transporte especial de pasajeros para todo tipo de ocasión 🚐</h2>
@@ -135,7 +140,7 @@
           </div>
           <div class="flex flex-column items-center">
             <span class="clr-secondary fs-4xl" data-count="enterprises" data-limit-count="50">+ 50</span>
-            <p class="flex flex-column items-center clr-primary fs-xs">Empresas <b>Han confiado en nosotros</b></p>
+            <p class="flex flex-column items-center clr-primary fs-xs text-center">Empresas <b>Han confiado en nosotros</b></p>
           </div>
           <div class="flex flex-column items-center">
             <span class="clr-secondary fs-4xl" data-count="vehicles" data-limit-count="300">+ 300</span>
@@ -143,60 +148,86 @@
           </div>
         </section>
       </section>
-      <section class="">
-        <h2>Somos la nueva solución de transporte en vans 🚐</h2>
-        <section class="">
-          <ul class="">
-            <li class="">
-              <figure class="">
-                <div class="">
-                  <span class=""></span>
-                </div>
-                <img src="" alt="" class="">
-                <figcaption>
-                  <h4 class="">Vango parchado</h4>
-                  <p class="">Alquiler de vans apar tus paseos, viajes o cualquier tipo de evento dentro y fuera de la ciudad</p>
-                </figcaption>
-              </figure>
+      <section class="container__transport-vans">
+        <h2 class="clr-primary">Somos la nueva solución de transporte en vans 🚐</h2>
+        <section class="container__slider-transport">
+          <button class="button--primary button--slider-transport rounded">
+            <span class="icon-arrow-left" aria-hidden="true"></span>
+          </button>
+          <ul class="slider-transport px-10">
+            <li class="slider-transport__item">
+              <a href="#" class="">
+                <figure class="card-transport">
+                  <div class="card-transport__float-icon">
+                    <div class="container-dotted-line">
+                      <span class="icon-logo-vango-parchado" aria-hidden="true"></span>
+                    </div>
+                  </div>
+                  <img src="public/assets/imgs/van.webp" alt="tranposrte van" class="card-transport__img">
+                  <figcaption class="card-transport__content">
+                    <h4 class="card-transport__title clr-primary">Vango parchado</h4>
+                    <p class="card-transport__description">Alquiler de vans apar tus paseos, viajes o cualquier tipo de evento dentro y fuera de la ciudad</p>
+                  </figcaption>
+                </figure>
+              </a>
             </li>
-            <li class="">
-              <figure class="">
-                <div class="">
-                  <span class=""></span>
-                </div>
-                <img src="" alt="" class="">
-                <figcaption>
-                  <h4 class=""></h4>
-                  <p class=""></p>
-                </figcaption>
-              </figure>
+            <li class="slider-transport__item">
+              <a href="#" class="">
+                <figure class="card-transport">
+                  <div class="card-transport__float-icon">
+                    <div class="container-dotted-line">
+                      <span class="icon-logo-vango-business" aria-hidden="true"></span>
+                    </div>
+                  </div>
+                  <img src="public/assets/imgs/empresas.webp" alt="empresas" class="card-transport__img">
+                  <figcaption class="card-transport__content">
+                    <h4 class="card-transport__title clr-primary">Vango Business</h4>
+                    <p class="card-transport__description">Servicio de transporte para empresas, transporta a tus empleados en vans de servicio especial de manera segura, comoda y confiable.</p>
+                  </figcaption>
+                </figure>
+              </a>
             </li>
-            <li class="">
-              <figure class="">
-                <div class="">
-                  <span class=""></span>
-                </div>
-                <img src="" alt="" class="">
-                <figcaption>
-                  <h4 class=""></h4>
-                  <p class=""></p>
-                </figcaption>
-              </figure>
-            </li>
-            <li class="">
-              <figure class="">
-                <div class="">
-                  <span class=""></span>
-                </div>
-                <img src="" alt="" class="">
-                <figcaption>
-                  <h4 class=""></h4>
-                  <p class=""></p>
-                </figcaption>
-              </figure>
+            <li class="slider-transport__item">
+              <a href="#" class="">
+                <figure class="card-transport">
+                  <div class="card-transport__float-icon">
+                    <div class="container-dotted-line">
+                      <span class="icon-logo-vango-tours" aria-hidden="true"></span>
+                    </div>
+                  </div>
+                  <img src="public/assets/imgs/turistas.webp" alt="turistas" class="card-transport__img">
+                  <figcaption class="card-transport__content">
+                    <h4 class="card-transport__title clr-primary">Vango Tours</h4>
+                    <p class="card-transport__description">Si buscas que hacer en Bogotá y cuentas con poco tiempo disponible tenemos planes de un día y por horas en diferentes categorías como cultura, naturaleza y gastronomía.</p>
+                  </figcaption>
+                </figure>
+              </a>
             </li>
           </ul>
+          <button class="button--primary button--slider-transport rounded">
+            <span class="icon-arrow-right" aria-hidden="true"></span>
+          </button>
         </section>
+      </section>
+      <section class="">
+        <picture class="">
+          <source media="(min-width: )" srcset="">
+          <source media="(min-width: )" srcset="">
+          <img src="public/assets/imgs/transporte.webp" alt="">
+        </picture>
+        <a href="" class="button--secondary rounded fw-600 uppercase">Cotiza tu servicio de transporte</a>
+      </section>
+      <section class="">
+        <h2 class="h2 clr-primary">Lo que dicen nuestros clientes 🖖</h2>
+        <blockquote cite="" class="">
+          <q>Me sentí como un Rockstar, muy bien atendido y cumplidos siempre.</q>
+        </blockquote>
+        <blockquote cite="" class="">
+          <q>El mejor transporte que he tomado, pude estar tranquila viendo Netflix sin miedo a que me robaran el celular! las Vans más cómodas.</q>
+        </blockquote>
+        <blockquote cite="" class="">
+          <q>Es un buen servicio, tiene sentido pagar un poco más por todas las comodidades que incluye.</q>
+        </blockquote>
       </section>
     </main>
     <footer class="footer mb-4">
